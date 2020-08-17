@@ -18,7 +18,10 @@
     <div class="container">
       <div class="jumbotron">
         <h1>Working!</h1>
-        <h2>Go to /users to sign up!</h2>
+        
+        <a class="btn btn-success" href="{% url 'admin:index' %}">Go to admin page</a class="btn">
+        <a class="btn btn-primary" href="{% url 'django_app:users' %}">Sign up user!</a class="btn">
+
       </div>
     </div>
 

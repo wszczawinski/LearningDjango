@@ -1,7 +1,10 @@
 from django.urls import path
-from . import views
+from django_app import views
+
+#setting namespace
+app_name = "django_app"
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("users/", views.users, name="users")
+    path("users/", views.users, name="users"),
 ]
