@@ -1,7 +1,7 @@
 from django.urls import path
 from django_app import views
 
-#setting namespace
+# setting namespace
 app_name = "django_app"
 
 urlpatterns = [

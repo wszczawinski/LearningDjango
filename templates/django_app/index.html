@@ -1,29 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome</title>
-    <!-- Latest compiled and minified CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-      crossorigin="anonymous"
-    />
-  </head>
 
-  <body>
-    
-    <div class="container">
-      <div class="jumbotron">
-        <h1>Working!</h1>
-        
-        <a class="btn btn-success" href="{% url 'admin:index' %}">Go to admin page</a class="btn">
-        <a class="btn btn-primary" href="{% url 'django_app:users' %}">Sign up user!</a class="btn">
+{% extends "django_app/base.html" %} 
 
-      </div>
-    </div>
+{% block body_block %}
 
-  </body>
-</html>
+<div class="jumbotron">
+  <h1>Working!</h1>
+
+  <a class="btn btn-success" href="{% url 'admin:index' %}">Go to admin page</a>
+  <a class="btn btn-primary" href="{% url 'django_app:users' %}"
+    >Sign up user!</a
+  >
+</div>
+
+{% endblock %}
