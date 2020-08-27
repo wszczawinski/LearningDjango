@@ -18,7 +18,9 @@ from django.urls import path, include
 from django_app import views
 
 urlpatterns = [
-    path("", include("django_app.urls")),
+    path('', views.index,name='index'),
     path("admin/", admin.site.urls),
     path("django_app/", include("django_app.urls")),
+    path('logout/', views.user_logout, name='logout'),
+    path('special/', views.special,name='special'),
 ]

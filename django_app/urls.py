@@ -1,10 +1,11 @@
 from django.urls import path
-from django_app import views
+from . import views
 
-# setting namespace
+# setting namespace (template url)
 app_name = "django_app"
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("users/", views.users, name="users"),
+    path("register/", views.register, name="register"),
+    path("user_login/", views.user_login, name="user_login"),
 ]

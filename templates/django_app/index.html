@@ -1,16 +1,22 @@
-<!DOCTYPE html>
-
 {% extends "django_app/base.html" %} 
-
 {% block body_block %}
 
-<div class="jumbotron">
-  <h1>Working!</h1>
+<div class="container">
+  <div class="jumbotron">
 
-  <a class="btn btn-success" href="{% url 'admin:index' %}">Go to admin page</a>
-  <a class="btn btn-primary" href="{% url 'django_app:users' %}"
-    >Sign up user!</a
-  >
+    <h1>Learning Django</h1>
+
+    {% if user.is_authenticated %}
+
+    <h2>Welcome {{ user.username }}!</h2>
+
+    {% else %}
+
+    <h2>Welcome to the site!</h2>
+    
+    {% endif %}
+
+  </div>
 </div>
 
 {% endblock %}
